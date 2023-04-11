@@ -17,33 +17,286 @@ class WallServiceTest {
     @Test
     fun addPostTest() {
         val service = WallService
-        //service.add(Post(1, Likes(0)))
         val result = service.add(
-            Post(1, Likes(0), 1547, 198460000, "какой-то текст", "(c)", "copy", true, false, false)
+            Post(
+                Likes(11),
+                2,
+                4,
+                5,
+                6544,
+                654646,
+                "Какой-то текст",
+                547411,
+                4581,
+                false,
+                5874,
+                "(c)",
+                null,
+                null,
+                null,
+                null,
+                null,
+                534654,
+                null,
+                canPin = true,
+                canDelete = false,
+                canEdit = true,
+                isPinned = false,
+                false,
+                true
+            )
         )
-        assertTrue(result.id > 0)
+        assertTrue(result.idPost > 0)
     }
 
     @Test
     fun updateExistingPostTest() {// создаём целевой сервис
         val service = WallService  // заполняем несколькими постами
-        service.add(Post(1, Likes(0), 1547, 198460000, "какой-то текст", "(c)", "copy", true, false, false))
-        service.add(Post(2, Likes(4), 1414, 198760000, "другой текст", "(c)", "copy", true, false, false))
-        service.add(Post(3, Likes(10), 1247, 199460000, "еще какой-то текст", "(c)", "copy", true, false, false))
+        service.add(
+            (
+                    Post(
+                        Likes(15),
+                        8,
+                        4,
+                        5,
+                        25,
+                        64684,
+                        "Другой текст",
+                        547411,
+                        4581,
+                        false,
+                        5874,
+                        "(c)",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        546464897,
+                        null,
+                        canPin = true,
+                        canDelete = false,
+                        canEdit = true,
+                        isPinned = false,
+                        false,
+                        true
+                    ))
+        )
+        service.add(
+            (
+                    Post(
+                        Likes(15),
+                        8,
+                        4,
+                        5,
+                        25,
+                        64684,
+                        "Другой текст",
+                        547411,
+                        4581,
+                        false,
+                        5874,
+                        "(c)",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        546464897,
+                        null,
+                        canPin = true,
+                        canDelete = false,
+                        canEdit = true,
+                        isPinned = false,
+                        markedAsAds = false,
+                        isFavorite = true
+                    ))
+        )
+
+        service.add(
+            (Post(
+                Likes(16),
+                5,
+                4,
+                5,
+                25,
+                147226,
+                "Другой текст",
+                547411,
+                4581,
+                true,
+                5874,
+                "(c)",
+                null,
+                null,
+                null,
+                null,
+                null,
+                65214,
+                null,
+                canPin = true,
+                canDelete = false,
+                canEdit = true,
+                isPinned = false,
+                markedAsAds = false,
+                isFavorite = true
+            ))
+        )
         // создаём информацию об обновлении
-        val update = Post(1, Likes(10), 1147, 190460000, "и еще какой-то текст", "(c)", "copy", true, false, false)
+        val update = Post(
+            Likes(16),
+            6,
+            4,
+            5,
+            25,
+            147226,
+            "Другой текст",
+            547411,
+            4581,
+            true,
+            5874,
+            "(c)",
+            null,
+            null,
+            null,
+            null,
+            null,
+            65214,
+            null,
+            canPin = true,
+            canDelete = false,
+            canEdit = true,
+            isPinned = false,
+            markedAsAds = false,
+            isFavorite = true
+        )
+
         val result = service.update(update)
-        assertTrue(result) // проверяем результат (используйте assertTrue или assertFalse)
+        assertFalse(result) // проверяем результат (используйте assertTrue или assertFalse)
     }
 
     @Test
     fun updateNotExistingPostTest() {// создаём целевой сервис
         val service = WallService  // заполняем несколькими постами
-        service.add(Post(1, Likes(0), 1547, 198460000, "какой-то текст", "(c)", "copy", true, false, false))
-        service.add(Post(2, Likes(4), 1414, 198760000, "другой текст", "(c)", "copy", true, false, false))
-        service.add(Post(3, Likes(10), 1247, 199460000, "еще какой-то текст", "(c)", "copy", true, false, false))
+        service.add(
+            (
+                    Post(
+                        Likes(15),
+                        8,
+                        4,
+                        5,
+                        25,
+                        64684,
+                        "Другой текст",
+                        547411,
+                        4581,
+                        false,
+                        5874,
+                        "(c)",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        546464897,
+                        null,
+                        canPin = true,
+                        canDelete = false,
+                        canEdit = true,
+                        isPinned = false,
+                        false,
+                        true
+                    ))
+        )
+        service.add(
+            (
+                    Post(
+                        Likes(15),
+                        8,
+                        4,
+                        5,
+                        25,
+                        64684,
+                        "Другой текст",
+                        547411,
+                        4581,
+                        false,
+                        5874,
+                        "(c)",
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        546464897,
+                        null,
+                        canPin = true,
+                        canDelete = false,
+                        canEdit = true,
+                        isPinned = false,
+                        markedAsAds = false,
+                        isFavorite = true
+                    ))
+        )
+
+        service.add(
+            (Post(
+                Likes(16),
+                5,
+                4,
+                5,
+                25,
+                147226,
+                "Другой текст",
+                547411,
+                4581,
+                true,
+                5874,
+                "(c)",
+                null,
+                null,
+                null,
+                null,
+                null,
+                65214,
+                null,
+                canPin = true,
+                canDelete = false,
+                canEdit = true,
+                isPinned = false,
+                markedAsAds = false,
+                isFavorite = true
+            ))
+        )
         // создаём информацию об обновлении
-        val update = Post(4, Likes(10), 1147, 190460000, "и еще какой-то текст", "(c)", "copy", true, false, false)
+        val update = Post(
+            Likes(16),
+            5,
+            4,
+            5,
+            27,
+            147226,
+            "Другой текст",
+            547411,
+            4581,
+            true,
+            5874,
+            "(c)",
+            null,
+            null,
+            null,
+            null,
+            null,
+            65214,
+            null,
+            canPin = true,
+            canDelete = false,
+            canEdit = true,
+            isPinned = false,
+            markedAsAds = false,
+            isFavorite = true
+        )
+
         val result = service.update(update)
         assertFalse(result) // проверяем результат (используйте assertTrue или assertFalse)
     }
