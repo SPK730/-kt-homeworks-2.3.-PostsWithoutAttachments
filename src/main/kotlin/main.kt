@@ -5,17 +5,7 @@ data class Likes(
 )
 
 data class Post(
-//    var id: Int = 1,
     var likes: Likes,
-//    var ownerId: Int = 54254,
-//    var date: Int = 1_671_408_000,
-//    var text: String = "Simply Post Text",
-//    var copyright: String = "(c)",
-//    var post_type: String = "copy",
-//    var can_pin: Boolean = true,
-//    var can_delete: Boolean = false,
-//    var marked_as_ads: Boolean = false
-
     val idPost: Int,
     val ownerId: Long,
     val fromId: Long,
@@ -32,7 +22,7 @@ data class Post(
     val views: Post?,
     val post_type: Post?,
     val post_source: Post?,
-    // var attachments: Array<Attachment> = emptyArray<Attachment>()
+    // var attachments: Array<Attachment> = emptyArray<Attachment>() // val attachments: Array<Attachment> = emptyArray() из вопросов
     val geo: Post?,
     val signer_id: Long,
     var copyHistory: Post?,
@@ -43,6 +33,7 @@ data class Post(
     var markedAsAds: Boolean,
     var isFavorite: Boolean,
 )
+
 
 object WallService {
     private var posts = emptyArray<Post>()
@@ -196,5 +187,50 @@ fun main() {
             isFavorite = true
         )
     )
+    val video1 = Video(
+        123,
+        12234,
+        "title video1",
+        "video dsc",
+        10,
+
+        )
+
+    val audio1 = Audio(
+        10,
+        12454353,
+        "artist",
+        "title",
+        3234,
+
+        )
+
+    val photo1 = Photo(
+        4358394,
+        324,
+        234545435,
+        54645,
+        "text",
+    )
+
+    val note1 = Note(
+        34543543,
+        334543543,
+        "title",
+        "text",
+        23423525,
+    )
+
+    val gift1 = Gift(
+        33,
+        "256",
+        "96",
+        "48"
+    )
+    val attachmentVideo1 = VideoAttachment(video1)
+    val attachmentAudio1 = AudioAttachment(audio1)
+    val attachmentPhoto1 = PhotoAttachment(photo1)
+    val attachmentNote1 = NoteAttachment(note1)
+    val attachmentGift1 = GiftAttachment(gift1)
 }
 
