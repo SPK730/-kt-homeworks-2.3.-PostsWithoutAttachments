@@ -35,15 +35,15 @@ class WallServiceTest {
                 null,
                 null,
                 null,
-                null,
-                534654,
-                null,
+                null,//???
+                36546464,
+                656464,
                 canPin = true,
                 canDelete = false,
                 canEdit = true,
                 isPinned = false,
-                false,
-                true
+                copyHistory = null,
+                markedAsAds = false
             )
         )
         assertTrue(result.idPost > 0)
@@ -55,13 +55,13 @@ class WallServiceTest {
         service.add(
             (
                     Post(
-                        Likes(15),
-                        8,
+                        Likes(11),
+                        2,
                         4,
                         5,
-                        25,
-                        64684,
-                        "Другой текст",
+                        6544,
+                        654646,
+                        "Какой-то текст",
                         547411,
                         4581,
                         false,
@@ -71,27 +71,27 @@ class WallServiceTest {
                         null,
                         null,
                         null,
-                        null,
-                        546464897,
-                        null,
+                        null,//???
+                        36546464,
+                        656464,
                         canPin = true,
                         canDelete = false,
                         canEdit = true,
                         isPinned = false,
-                        false,
-                        true
+                        copyHistory = null,
+                        markedAsAds = false
                     ))
         )
         service.add(
             (
                     Post(
-                        Likes(15),
-                        8,
+                        Likes(11),
+                        2,
                         4,
                         5,
-                        25,
-                        64684,
-                        "Другой текст",
+                        6544,
+                        654646,
+                        "Какой-то текст",
                         547411,
                         4581,
                         false,
@@ -101,78 +101,78 @@ class WallServiceTest {
                         null,
                         null,
                         null,
-                        null,
-                        546464897,
-                        null,
+                        null,//???
+                        36546464,
+                        656464,
                         canPin = true,
                         canDelete = false,
                         canEdit = true,
                         isPinned = false,
-                        markedAsAds = false,
-                        isFavorite = true
+                        copyHistory = null,
+                        markedAsAds = false
                     ))
         )
 
         service.add(
             (Post(
-                Likes(16),
-                5,
+                Likes(11),
+                2,
                 4,
                 5,
-                25,
-                147226,
-                "Другой текст",
+                6544,
+                654646,
+                "Какой-то текст",
                 547411,
                 4581,
-                true,
+                false,
                 5874,
                 "(c)",
                 null,
                 null,
                 null,
                 null,
-                null,
-                65214,
-                null,
+                null,//???
+                36546464,
+                656464,
                 canPin = true,
                 canDelete = false,
                 canEdit = true,
                 isPinned = false,
-                markedAsAds = false,
-                isFavorite = true
+                copyHistory = null,
+                markedAsAds = false
             ))
         )
         // создаём информацию об обновлении
         val update = Post(
-            Likes(16),
-            6,
+            Likes(11),
+            2,
             4,
             5,
-            25,
-            147226,
-            "Другой текст",
+            6544,
+            654646,
+            "Какой-то текст",
             547411,
             4581,
-            true,
+            false,
             5874,
             "(c)",
             null,
             null,
             null,
             null,
-            null,
-            65214,
-            null,
+            null,//???
+            36546464,
+            656464,
             canPin = true,
             canDelete = false,
             canEdit = true,
             isPinned = false,
-            markedAsAds = false,
-            isFavorite = true
+            copyHistory = null,
+            markedAsAds = false
         )
 
         val result = service.update(update)
-        assertFalse(result) // проверяем результат (используйте assertTrue или assertFalse)
+        assertTrue(result) // проверяем результат (используйте assertTrue или assertFalse)
     }
 
     @Test
@@ -181,13 +181,13 @@ class WallServiceTest {
         service.add(
             (
                     Post(
-                        Likes(15),
-                        8,
+                        Likes(11),
+                        2,
                         4,
                         5,
-                        25,
-                        64684,
-                        "Другой текст",
+                        6544,
+                        654646,
+                        "Какой-то текст",
                         547411,
                         4581,
                         false,
@@ -197,27 +197,27 @@ class WallServiceTest {
                         null,
                         null,
                         null,
-                        null,
-                        546464897,
-                        null,
+                        null,//???
+                        36546464,
+                        656464,
                         canPin = true,
                         canDelete = false,
                         canEdit = true,
                         isPinned = false,
-                        false,
-                        true
+                        copyHistory = null,
+                        markedAsAds = false
                     ))
         )
         service.add(
             (
                     Post(
-                        Likes(15),
-                        8,
+                        Likes(11),
+                        2,
                         4,
                         5,
-                        25,
-                        64684,
-                        "Другой текст",
+                        6544,
+                        654646,
+                        "Какой-то текст",
                         547411,
                         4581,
                         false,
@@ -227,78 +227,78 @@ class WallServiceTest {
                         null,
                         null,
                         null,
-                        null,
-                        546464897,
-                        null,
+                        null,//???
+                        36546464,
+                        656464,
                         canPin = true,
                         canDelete = false,
                         canEdit = true,
                         isPinned = false,
-                        markedAsAds = false,
-                        isFavorite = true
+                        copyHistory = null,
+                        markedAsAds = false
                     ))
         )
 
         service.add(
             (Post(
-                Likes(16),
-                5,
+                Likes(11),
+                2,
                 4,
                 5,
-                25,
-                147226,
-                "Другой текст",
+                6544,
+                654646,
+                "Какой-то текст",
                 547411,
                 4581,
-                true,
+                false,
                 5874,
                 "(c)",
                 null,
                 null,
                 null,
                 null,
-                null,
-                65214,
-                null,
+                null,//???
+                36546464,
+                656464,
                 canPin = true,
                 canDelete = false,
                 canEdit = true,
                 isPinned = false,
-                markedAsAds = false,
-                isFavorite = true
+                copyHistory = null,
+                markedAsAds = false
             ))
         )
         // создаём информацию об обновлении
         val update = Post(
-            Likes(16),
-            5,
+            Likes(11),
+            2,
             4,
             5,
-            27,
-            147226,
-            "Другой текст",
+            6544,
+            654646,
+            "Какой-то текст",
             547411,
             4581,
-            true,
+            false,
             5874,
             "(c)",
             null,
             null,
             null,
             null,
-            null,
-            65214,
-            null,
+            null,//???
+            36546464,
+            656464,
             canPin = true,
             canDelete = false,
             canEdit = true,
             isPinned = false,
-            markedAsAds = false,
-            isFavorite = true
+            copyHistory = null,
+            markedAsAds = false
         )
 
         val result = service.update(update)
-        assertFalse(result) // проверяем результат (используйте assertTrue или assertFalse)
+        assertTrue(result) // проверяем результат (используйте assertTrue или assertFalse)
     }
 
 }

@@ -22,8 +22,8 @@ data class Post(
     val views: Post?,
     val post_type: Post?,
     val post_source: Post?,
-    // var attachments: Array<Attachment> = emptyArray<Attachment>() // val attachments: Array<Attachment> = emptyArray() из вопросов
-    val geo: Post?,
+    val attachments: Array<Attachment>? = emptyArray(), //var attachments: Array<Attachment> = emptyArray<Attachment>(), // из вопросов
+    val geo: Long,
     val signer_id: Long,
     var copyHistory: Post?,
     val canPin: Boolean,
@@ -31,7 +31,6 @@ data class Post(
     var canEdit: Boolean,
     val isPinned: Boolean,
     var markedAsAds: Boolean,
-    var isFavorite: Boolean,
 )
 
 
@@ -87,58 +86,58 @@ fun main() {
             null,
             null,
             null,
-            null,
-            534654,
-            null,
+            null,//???
+            36546464,
+            656464,
             canPin = true,
             canDelete = false,
             canEdit = true,
             isPinned = false,
-            false,
-            true
-        )
+            copyHistory = null,
+            markedAsAds = false
+          )
     )
     WallService.add(
         Post(
-            Likes(15),
-            8,
+            Likes(181),
+            3,
             4,
             5,
-            25,
-            64684,
-            "Другой текст",
-            547411,
-            4581,
+            6544,
+            654646,
+            "Какой-то текст",
+            455,
+            25545,
             false,
-            5874,
+            76465,
             "(c)",
             null,
             null,
             null,
             null,
-            null,
-            546464897,
-            null,
+            null,//???
+            45644,
+            545,
             canPin = true,
             canDelete = false,
             canEdit = true,
             isPinned = false,
-            false,
-            true
+            copyHistory = null,
+            markedAsAds = false
         )
     )
 
     WallService.printPosts()
     WallService.update(
         Post(
-            Likes(15),
-            8,
+            Likes(11),
+            2,
             4,
             5,
-            25,
-            64684,
-            "Другой текст",
-            547411,
+            6544,
+            8635321,
+            "Какой-то текст",
+            255,
             4581,
             false,
             5874,
@@ -147,44 +146,44 @@ fun main() {
             null,
             null,
             null,
-            null,
-            546464897,
-            null,
+            null,//???
+            36546464,
+            656464,
             canPin = true,
             canDelete = false,
             canEdit = true,
             isPinned = false,
-            markedAsAds = false,
-            isFavorite = true
+            copyHistory = null,
+            markedAsAds = false
         )
     )
     WallService.update(
         Post(
-            Likes(16),
+            Likes(11),
+            2,
+            6,
             5,
-            4,
-            5,
-            25,
-            147226,
-            "Другой текст",
-            547411,
-            4581,
-            true,
+            3545,
+            654646,
+            "Какой-то текст",
+            3216547,
+            5641541,
+            false,
             5874,
             "(c)",
             null,
             null,
             null,
             null,
-            null,
-            65214,
-            null,
+            null,//???
+            5455452,
+            22212,
             canPin = true,
             canDelete = false,
             canEdit = true,
             isPinned = false,
-            markedAsAds = false,
-            isFavorite = true
+            copyHistory = null,
+            markedAsAds = false
         )
     )
     val video1 = Video(
